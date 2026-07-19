@@ -1,16 +1,63 @@
-# React + Vite
+# E-Learning Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+E-Learning Platform là website học tiếng Anh trực tuyến được xây dựng nhằm hỗ trợ học viên học tập, luyện tập và theo dõi tiến độ học trên một nền tảng duy nhất.
 
-Currently, two official plugins are available:
+Dự án được phát triển theo mô hình Client - Server với React ở phía Frontend, Node.js và Express ở phía Backend, sử dụng MySQL để lưu trữ dữ liệu.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Công nghệ sử dụng
 
-## React Compiler
+### Frontend
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- Tailwind CSS
+- React Router DOM
+- Axios
 
-## Expanding the ESLint configuration
+### Backend
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Node.js
+- Express.js
+- JWT
+- bcrypt
+- multer
+- mysql2
+
+### Database
+
+- MySQL
+
+## Chức năng chính
+
+- Đăng ký, đăng nhập
+- Quản lý tài khoản
+- Xem danh sách khóa học
+- Đăng ký khóa học
+- Học bài trực tuyến
+- Làm bài luyện tập
+- Học bằng Flashcards
+- Theo dõi tiến độ học tập
+- Quản lý khóa học (Teacher)
+- Quản trị hệ thống (Admin)
+
+## Cấu trúc dự án
+
+```
+E-Learning
+│
+├── frontend
+│
+└── backend
+```
+
+## Cài đặt
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### Backend
