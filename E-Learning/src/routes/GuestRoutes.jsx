@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 import MainLayout from "../layouts/MainLayout";
 
@@ -7,13 +7,10 @@ import About from "../pages/guest/About";
 import Courses from "../pages/guest/Courses";
 import CourseDetail from "../pages/guest/CourseDetail";
 import Contact from "../pages/guest/Contact";
-import Login from "../pages/guest/Login";
-import Register from "../pages/guest/Register";
-import NotFound from "../pages/guest/NotFound";
 
-function AppRoutes() {
+function GuestRoutes() {
   return (
-    <Routes>
+    <>
       <Route path="/" element={<Home />} />
 
       <Route path="/about" element={<About />} />
@@ -23,14 +20,8 @@ function AppRoutes() {
       <Route path="/courses/:id" element={<CourseDetail />} />
 
       <Route path="/contact" element={<Contact />} />
-
-      <Route path="/login" element={<Login />} />
-
-      <Route path="/register" element={<Register />} />
-
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    </>
   );
 }
 
-export default AppRoutes;
+export default GuestRoutes;
