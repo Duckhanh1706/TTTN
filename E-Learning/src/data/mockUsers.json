@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Nguyễn Văn Học Viên",
+    "name": "Nguyễn Văn A",
     "email": "student@elearning.vn",
     "password": "123456",
     "role": "student",
@@ -9,7 +9,7 @@
   },
   {
     "id": 2,
-    "name": "Thầy Giáo Giảng Viên",
+    "name": "Trần Văn B",
     "email": "teacher@elearning.vn",
     "password": "123456",
     "role": "teacher",
@@ -17,7 +17,7 @@
   },
   {
     "id": 3,
-    "name": "Quản Trị Viên Admin",
+    "name": "Quản Trị Viên ",
     "email": "admin@elearning.vn",
     "password": "123456",
     "role": "admin",

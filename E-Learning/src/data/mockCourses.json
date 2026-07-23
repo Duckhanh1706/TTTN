@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "slug": "ielts-foundation",
     "title": "IELTS Foundation - Nền tảng toàn diện 4 kỹ năng",
     "category": "IELTS",
     "price": "1.200.000đ",
@@ -9,14 +10,18 @@
     "reviewsCount": 1240,
     "studentsCount": 3500,
     "duration": "4 tháng",
+    "totalLessons": 48,
     "level": "Mất gốc / Cơ bản",
+    "shortDescription": "Xây dựng lại từ đầu hệ thống phát âm, ngữ pháp và từ vựng cốt lõi cho 4 kỹ năng.",
     "description": "Khóa học thiết kế độc quyền giúp học viên xây dựng lại từ đầu hệ thống phát âm, ngữ pháp và từ vựng cốt lõi cho 4 kỹ năng Nghe - Nói - Đọc - Viết.",
     "instructor": "Thầy Nguyễn Văn A",
     "instructorTitle": "IELTS 8.5 - 6 năm kinh nghiệm giảng dạy",
-    "badge": "Bán chạy nhất"
+    "badge": "Bán chạy nhất",
+    "status": "active"
   },
   {
     "id": 2,
+    "slug": "toeic-full-practice-900",
     "title": "TOEIC Full Practice Strategy 900+",
     "category": "TOEIC",
     "price": "990.000đ",
@@ -25,14 +30,18 @@
     "reviewsCount": 980,
     "studentsCount": 2800,
     "duration": "3 tháng",
+    "totalLessons": 36,
     "level": "Trung cấp (TOEIC 450+)",
+    "shortDescription": "Làm chủ toàn bộ cấu trúc đề thi TOEIC format mới và chiến lược giải nhanh Part 5, 6, 7.",
     "description": "Làm chủ toàn bộ cấu trúc đề thi TOEIC format mới, chiến lược giải nhanh Part 5, 6, 7 và kỹ năng nghe bẫy tinh vi.",
     "instructor": "Cô Trần Thị B",
     "instructorTitle": "TOEIC 990 / Chuyên gia luyện thi TOEIC",
-    "badge": "Đột phá điểm số"
+    "badge": "Đột phá điểm số",
+    "status": "active"
   },
   {
     "id": 3,
+    "slug": "english-communication-for-work",
     "title": "English Communication for Work (Tiếng Anh Công Sở)",
     "category": "Communication",
     "price": "1.490.000đ",
@@ -41,14 +50,18 @@
     "reviewsCount": 750,
     "studentsCount": 1900,
     "duration": "3 tháng",
+    "totalLessons": 30,
     "level": "Mọi cấp độ",
+    "shortDescription": "Tự tin giao tiếp, viết email thương mại chuyên nghiệp và họp bàn trôi chảy với đối tác.",
     "description": "Tự tin giao tiếp, viết email thương mại chuyên nghiệp, thuyết trình và họp bàn trôi chảy với đối tác nước ngoài.",
     "instructor": "Thầy David John",
     "instructorTitle": "Giám đốc đào tạo ngoại ngữ quốc tế",
-    "badge": "Thực chiến 100%"
+    "badge": "Thực chiến 100%",
+    "status": "active"
   },
   {
     "id": 4,
+    "slug": "ielts-speaking-writing-advanced",
     "title": "IELTS Speaking & Writing Advanced 7.0+",
     "category": "IELTS",
     "price": "1.690.000đ",
@@ -57,15 +70,19 @@
     "reviewsCount": 620,
     "studentsCount": 1500,
     "duration": "3.5 tháng",
+    "totalLessons": 42,
     "level": "Nâng cao (IELTS 6.0+)",
+    "shortDescription": "Chuyên sâu bứt phá band điểm Writing Task 1, 2 và phản xạ Speaking Part 2, 3.",
     "description": "Chuyên sâu bứt phá band điểm Writing Task 1, 2 và kỹ năng phản xạ Speaking Part 2, 3 với kho từ vựng Academic ghi điểm cao.",
     "instructor": "Cô Lê Hoài Thương",
     "instructorTitle": "IELTS 9.0 / Giám khảo chấm thi giả lập",
-    "badge": "Chuyên sâu 7.0+"
+    "badge": "Chuyên sâu 7.0+",
+    "status": "active"
   },
   {
     "id": 5,
-    "title": "Mastering English Pronunciation & Accent (Phát âm chuẩn Anh - Mỹ)",
+    "slug": "mastering-english-pronunciation",
+    "title": "Mastering English Pronunciation & Accent",
     "category": "Pronunciation",
     "price": "790.000đ",
     "oldPrice": "1.200.000đ",
@@ -73,14 +90,18 @@
     "reviewsCount": 840,
     "studentsCount": 4200,
     "duration": "2 tháng",
+    "totalLessons": 20,
     "level": "Mọi cấp độ",
+    "shortDescription": "Sửa lỗi phát âm sai, nắm vững hệ thống ngữ âm IPA và quy tắc nối âm.",
     "description": "Sửa lỗi phát âm sai, nắm vững hệ thống ngữ âm IPA, quy tắc nối âm, nuốt âm và ngữ điệu tự nhiên như người bản xứ.",
     "instructor": "Thầy Michael Brown",
     "instructorTitle": "Chuyên gia huấn luyện ngôn ngữ TESOL",
-    "badge": "Dễ học nhất"
+    "badge": "Dễ học nhất",
+    "status": "active"
   },
   {
     "id": 6,
+    "slug": "business-english-presentation",
     "title": "Business English Presentation & Negotiation",
     "category": "Communication",
     "price": "1.890.000đ",
@@ -89,10 +110,13 @@
     "reviewsCount": 410,
     "studentsCount": 980,
     "duration": "2.5 tháng",
+    "totalLessons": 25,
     "level": "Trung cấp - Nâng cao",
+    "shortDescription": "Trang bị kỹ năng thuyết trình kinh doanh đỉnh cao và nghệ thuật đàm phán quốc tế.",
     "description": "Trang bị kỹ năng thuyết trình kinh doanh đỉnh cao, nghệ thuật đàm phán hợp đồng quốc tế và xử lý từ chối khéo léo.",
     "instructor": "Cô Sarah Jenkins",
     "instructorTitle": "Cố vấn chiến lược doanh nghiệp đa quốc gia",
-    "badge": "Cao cấp VIP"
+    "badge": "Cao cấp VIP",
+    "status": "active"
   }
 ]

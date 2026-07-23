@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 
-const Footer = () => {
+export default function Footer() {
   return (
     <footer className="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
         {/* Cột 1: Thông tin thương hiệu */}
         <div className="space-y-4 md:col-span-1">
           <span className="font-black text-xl text-white tracking-tight">
-            Lumina<span className="text-blue-500">Learning</span>
+            English<span className="text-blue-500">Learning</span>
           </span>
           <p className="text-xs text-slate-400 leading-relaxed">
             Nền tảng học tập trực tuyến thông minh, chuẩn hóa lộ trình luyện thi
@@ -105,13 +105,13 @@ const Footer = () => {
             Email: support@elearning.vn
           </p>
           <div className="flex gap-3 text-xs font-semibold">
-            <span className="w-8 h-8 rounded-xl bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition-colors cursor-pointer text-white">
+            <span className="w-8 h-8 rounded-xl bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition-colors cursor-pointer text-white shadow-sm">
               FB
             </span>
-            <span className="w-8 h-8 rounded-xl bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition-colors cursor-pointer text-white">
+            <span className="w-8 h-8 rounded-xl bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition-colors cursor-pointer text-white shadow-sm">
               YT
             </span>
-            <span className="w-8 h-8 rounded-xl bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition-colors cursor-pointer text-white">
+            <span className="w-8 h-8 rounded-xl bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition-colors cursor-pointer text-white shadow-sm">
               IG
             </span>
           </div>
@@ -120,7 +120,7 @@ const Footer = () => {
 
       {/* Copyright & Policy */}
       <div className="max-w-7xl mx-auto px-6 border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-        <p>© 2026 Lumina Learning. All rights reserved.</p>
+        <p>© 2026 English Learning. All rights reserved.</p>
         <div className="flex gap-6 font-semibold">
           <a href="#" className="hover:text-slate-300 transition-colors">
             Chính sách bảo mật
@@ -132,6 +132,4 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
