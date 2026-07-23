@@ -5,7 +5,6 @@ import MOCK_COURSES from "../../data/mockCourses.json";
 
 function Courses() {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [searchQuery, setSearchQuery] = useState("");
 
   const categories = [
     { label: "Tất cả khóa học", value: "All" },
@@ -16,46 +15,55 @@ function Courses() {
   ];
 
   const filteredCourses = MOCK_COURSES.filter((course) => {
-    const matchCategory =
-      selectedCategory === "All" || course.category === selectedCategory;
-    const matchSearch = course.title
-      .toLowerCase()
-      .includes(searchQuery.toLowerCase());
-    return matchCategory && matchSearch;
+    return selectedCategory === "All" || course.category === selectedCategory;
   });
 
   return (
-    <MainLayout>
+    <>
       <div className="courses-page bg-[#F8FAFC] min-h-screen">
-        {/* Hero Header với hiệu ứng animate-fade-in-up */}
-        <section className="courses-hero bg-gradient-to-r from-blue-900 via-slate-900 to-indigo-950 py-16 lg:py-24 text-white relative overflow-hidden">
+        {/* Hero Banner mới: Thiết kế 2 cột hiện đại, có hình ảnh minh họa và không còn thanh tìm kiếm */}
+        <section className="courses-hero bg-gradient-to-r from-blue-900 via-slate-900 to-indigo-950 py-16 lg:py-20 text-white relative overflow-hidden">
           <div className="absolute right-0 top-0 translate-x-1/4 -translate-y-1/4 w-96 h-96 bg-blue-600/25 rounded-full blur-3xl pointer-events-none"></div>
 
-          <div className="courses-hero__container mx-auto max-w-7xl px-6 relative z-10 text-center animate-fade-in-up">
-            <span className="inline-block py-1.5 px-4 rounded-full bg-blue-500/20 text-blue-300 font-semibold text-xs tracking-wider uppercase mb-4 border border-blue-400/20">
-              Hệ thống học luyện thông minh
-            </span>
-            <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
-              Khóa học chuẩn hóa đầu ra
-            </h1>
-            <p className="mt-4 text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-              Lộ trình học tập cá nhân hóa kết hợp công nghệ luyện tập độc
-              quyền, giúp bạn chinh phục mục tiêu ngoại ngữ nhanh nhất.
-            </p>
+          <div className="courses-hero__container mx-auto max-w-7xl px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Nội dung text bên trái */}
+            <div className="space-y-6 text-center lg:text-left">
+              <span className="inline-block py-1.5 px-4 rounded-full bg-blue-500/20 text-blue-300 font-semibold text-xs tracking-wider uppercase border border-blue-400/20 shadow-sm">
+                🎓 Hệ thống học ngoại ngữ thông minh
+              </span>
+              <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+                Chinh phục band điểm mục tiêu cùng chuyên gia
+              </h1>
+              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Lộ trình học tập cá nhân hóa kết hợp công nghệ luyện từ vựng và
+                luyện đề độc quyền, giúp bạn bứt phá năng lực ngoại ngữ nhanh
+                nhất.
+              </p>
+              <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-2">
+                <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-xl text-xs font-medium border border-white/10">
+                  <span>⭐ 4.9/5 Đánh giá</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-xl text-xs font-medium border border-white/10">
+                  <span>👥 15,000+ Học viên</span>
+                </div>
+              </div>
+            </div>
 
-            {/* Search Box */}
-            <div className="mt-8 max-w-xl mx-auto animate-fade-in-up delay-100">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Tìm kiếm khóa học mong muốn (IELTS, TOEIC, Giao tiếp...)"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl py-4 pl-12 pr-6 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all shadow-inner"
-                />
-                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-lg">
-                  🔍
-                </span>
+            {/* Hình ảnh minh họa bên phải banner */}
+            <div className="relative flex justify-center">
+              <div className="relative w-full max-w-md h-72 sm:h-80 rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-gradient-to-br from-blue-600/30 to-indigo-700/30 backdrop-blur-md flex items-center justify-center p-6 text-center">
+                <div className="space-y-3">
+                  <div className="w-16 h-16 bg-blue-600 text-white rounded-2xl mx-auto flex items-center justify-center text-3xl shadow-lg shadow-blue-500/40">
+                    🚀
+                  </div>
+                  <h3 className="text-lg font-bold text-white">
+                    Lộ trình chuẩn hóa
+                  </h3>
+                  <p className="text-xs text-slate-300 leading-relaxed">
+                    Cam kết đầu ra bằng văn bản, hỗ trợ 1-1 cùng giảng viên giàu
+                    kinh nghiệm.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -65,7 +73,7 @@ function Courses() {
         <section className="courses-content py-12 lg:py-16">
           <div className="courses-content__container mx-auto max-w-7xl px-6">
             {/* Categories Filter Tabs */}
-            <div className="courses-filters flex flex-wrap items-center justify-center gap-3 mb-12 animate-fade-in-up delay-200">
+            <div className="courses-filters flex flex-wrap items-center justify-center gap-3 mb-12">
               {categories.map((cat) => (
                 <button
                   key={cat.value}
@@ -84,10 +92,10 @@ function Courses() {
             {/* Courses Grid */}
             <div className="courses-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredCourses.length > 0 ? (
-                filteredCourses.map((course, index) => (
+                filteredCourses.map((course) => (
                   <div
                     key={course.id}
-                    className={`courses-card group flex flex-col justify-between bg-white rounded-3xl border border-slate-200/70 p-6 shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 relative overflow-hidden animate-fade-in-up delay-${(index + 1) * 100}`}
+                    className="courses-card group flex flex-col justify-between bg-white rounded-3xl border border-slate-200/70 p-6 shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 relative overflow-hidden"
                   >
                     <div>
                       <div className="absolute top-0 right-0 bg-blue-600 text-white text-[10px] font-extrabold px-4 py-1.5 rounded-bl-2xl uppercase tracking-wider shadow-sm">
@@ -161,7 +169,7 @@ function Courses() {
               ) : (
                 <div className="col-span-full py-16 text-center text-slate-500">
                   <p className="text-lg font-semibold">
-                    Không tìm thấy khóa học phù hợp với từ khóa của bạn.
+                    Không tìm thấy khóa học trong danh mục này.
                   </p>
                 </div>
               )}
@@ -169,7 +177,7 @@ function Courses() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </>
   );
 }
 

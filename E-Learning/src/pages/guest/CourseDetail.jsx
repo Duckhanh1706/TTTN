@@ -6,14 +6,17 @@ function CourseDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const isAuthenticated = false;
-
   const handleProtectedAction = (actionType) => {
-    if (!isAuthenticated) {
+    // Kiểm tra trạng thái đăng nhập thực tế từ localStorage
+    const userStored = localStorage.getItem("elearning_user");
+
+    if (!userStored) {
+      // Nếu chưa đăng nhập -> Chuyển đến trang login và lưu lại trạng thái đang xem dở
       navigate("/login", {
         state: { from: `/courses/${id}`, action: actionType },
       });
     } else {
+      // Nếu đã đăng nhập -> Xử lý nghiệp vụ giỏ hàng hoặc thanh toán
       if (actionType === "cart") {
         alert("Đã thêm khóa học vào giỏ hàng thành công!");
       } else {
@@ -27,7 +30,7 @@ function CourseDetail() {
   const foundCourse =
     MOCK_COURSES.find((item) => item.id === courseId) || MOCK_COURSES[0];
 
-  // Chuẩn hóa dữ liệu course (kết hợp dữ liệu từ JSON và giá trị dự phòng cho nội dung chi tiết)
+  // Chuẩn hóa dữ liệu course
   const course = {
     ...foundCourse,
     description:
@@ -74,7 +77,7 @@ function CourseDetail() {
   };
 
   return (
-    <MainLayout>
+    <>
       <div className="course-detail bg-[#F8FAFC] min-h-screen py-12 lg:py-16">
         <div className="course-detail__container mx-auto max-w-7xl px-6">
           {/* Breadcrumb */}
@@ -155,7 +158,6 @@ function CourseDetail() {
                     <div
                       key={index}
                       className="rounded-2xl border border-slate-200/60 p-5 bg-slate-50/40 flex items-center justify-between transition-all hover:bg-white hover:shadow-md cursor-pointer"
-                      onClick={() => handleProtectedAction("view_curriculum")}
                     >
                       <div>
                         <h3 className="text-sm font-bold text-slate-900">
@@ -260,7 +262,7 @@ function CourseDetail() {
           </div>
         </div>
       </div>
-    </MainLayout>
+    </>
   );
 }
 

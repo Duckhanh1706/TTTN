@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import MainLayout from "../../layouts/MainLayout";
-import FloatingContact from "../../components/common/FloatingContact";
 import hero from "../../assets/hero.png";
 import MOCK_COURSES from "../../data/mockCourses.json";
 
@@ -8,10 +6,9 @@ function Home() {
   const featuredCourses = MOCK_COURSES.slice(0, 3);
 
   return (
-    <MainLayout>
+    <>
       {/* Hero Section */}
       <section className="home-hero relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 py-24 lg:py-32 text-white">
-        {/* Vibrant multi-layer background glow effects */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[500px] w-[1000px] rounded-full bg-blue-600/20 blur-[120px] pointer-events-none"></div>
         <div className="absolute -left-20 top-1/3 h-96 w-96 rounded-full bg-indigo-600/15 blur-[100px] pointer-events-none"></div>
         <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-cyan-500/10 blur-[100px] pointer-events-none"></div>
@@ -311,172 +308,10 @@ function Home() {
         </div>
       </section>
 
-      {/* Practice */}
-      <section className="home-practice py-24 bg-white">
-        <div className="home-practice__container mx-auto max-w-7xl px-6">
-          <div className="home-practice__header mx-auto mb-16 max-w-2xl text-center">
-            <span className="text-xs font-black uppercase tracking-widest text-blue-600 bg-blue-100/70 px-4 py-1.5 rounded-full">
-              Hệ thống tương tác thông minh
-            </span>
-            <h2 className="home-practice__title mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
-              Luyện tập chuyên sâu mỗi ngày
-            </h2>
-            <p className="home-practice__desc mt-4 text-slate-600 font-medium">
-              Phát triển toàn diện mọi kỹ năng ngoại ngữ mọi lúc, mọi nơi với
-              công nghệ AI hỗ trợ.
-            </p>
-          </div>
-
-          <div className="home-practice__grid grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                title: "Vocabulary",
-                desc: "Flashcards thông minh ghi nhớ từ vựng gấp 3 lần.",
-              },
-              {
-                title: "Grammar",
-                desc: "Hệ thống bài tập hệ thống bản chất cấu trúc câu.",
-              },
-              {
-                title: "Listening",
-                desc: "Luyện nghe thụ động & chủ động chuẩn giọng bản xứ.",
-              },
-              {
-                title: "Reading",
-                desc: "Kỹ thuật Skimming & Scanning giải đề thần tốc.",
-              },
-              {
-                title: "Speaking",
-                desc: "Phòng luyện nói ảo chấm điểm phát âm tự động.",
-              },
-              {
-                title: "Writing",
-                desc: "AI phân tích lỗi sai và gợi ý từ vựng band cao.",
-              },
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                className="home-practice__card group rounded-3xl border border-slate-200/70 bg-gradient-to-br from-slate-50/80 to-white p-8 transition-all duration-300 hover:bg-white hover:border-blue-400 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10"
-              >
-                <div className="home-practice__icon mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 text-2xl text-white transition-transform duration-300 group-hover:scale-110 shadow-lg shadow-blue-500/30">
-                  📘
-                </div>
-                <h3 className="home-practice__name text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
-                  {item.title}
-                </h3>
-                <p className="home-practice__text mt-3 text-xs leading-relaxed text-slate-600 font-medium">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Teachers */}
-      <section className="home-teachers bg-slate-50/80 py-24 border-t border-slate-200/60">
-        <div className="home-teachers__container mx-auto max-w-7xl px-6">
-          <div className="home-teachers__header mx-auto mb-16 max-w-2xl text-center">
-            <span className="text-xs font-black uppercase tracking-widest text-indigo-600 bg-indigo-100/70 px-4 py-1.5 rounded-full">
-              Chuyên gia hàng đầu
-            </span>
-            <h2 className="home-teachers__title mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
-              Đội ngũ giảng viên đẳng cấp
-            </h2>
-            <p className="home-teachers__desc mt-4 text-slate-600 font-medium">
-              Đồng hành sát cánh cùng bạn với tâm huyết và phương pháp giảng dạy
-              thực chiến hiệu quả.
-            </p>
-          </div>
-
-          <div className="home-teachers__grid grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {[1, 2, 3, 4].map((teacher) => (
-              <div
-                key={teacher}
-                className="home-teachers__card rounded-3xl border border-slate-200/80 bg-white p-6 text-center shadow-xl shadow-slate-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/10"
-              >
-                <div className="home-teachers__avatar mx-auto h-32 w-32 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 p-1 shadow-md">
-                  <div className="h-full w-full rounded-full bg-slate-200 flex items-center justify-center text-3xl font-black text-slate-400 overflow-hidden">
-                    👨‍🏫
-                  </div>
-                </div>
-                <h3 className="home-teachers__name mt-5 text-lg font-black text-slate-900">
-                  Thầy Nguyễn Văn A
-                </h3>
-                <p className="home-teachers__role mt-1 text-xs font-black text-blue-600 bg-blue-50 py-1 px-3 rounded-full inline-block">
-                  IELTS 8.5 Expert
-                </p>
-                <p className="home-teachers__bio mt-4 text-xs text-slate-500 leading-relaxed font-medium">
-                  Hơn 8 năm kinh nghiệm luyện thi, giúp hàng nghìn học viên
-                  chinh phục band điểm mơ ước.
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="home-testimonials py-24 bg-white">
-        <div className="home-testimonials__container mx-auto max-w-7xl px-6">
-          <div className="home-testimonials__header mx-auto mb-16 max-w-2xl text-center">
-            <span className="text-xs font-black uppercase tracking-widest text-amber-600 bg-amber-100/70 px-4 py-1.5 rounded-full">
-              Đánh giá thực tế từ học viên
-            </span>
-            <h2 className="home-testimonials__title mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
-              Học viên nói gì về chúng tôi?
-            </h2>
-            <p className="home-testimonials__desc mt-4 text-slate-600 font-medium">
-              Hơn 50.000 học viên đã tin tưởng và thay đổi kỹ năng ngoại ngữ
-              thành công rực rỡ.
-            </p>
-          </div>
-
-          <div className="home-testimonials__grid grid grid-cols-1 gap-8 lg:grid-cols-3">
-            {[
-              { name: "Nguyễn Minh Anh", score: "IELTS 7.5" },
-              { name: "Trần Quốc Bảo", score: "TOEIC 905" },
-              { name: "Lê Khánh Linh", score: "IELTS 8.0" },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="home-testimonials__card flex flex-col justify-between rounded-3xl border border-slate-200/80 bg-gradient-to-br from-slate-50/50 to-white p-8 shadow-xl shadow-slate-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-amber-500/10"
-              >
-                <div>
-                  <div className="home-testimonials__stars mb-5 text-sm tracking-widest">
-                    ⭐⭐⭐⭐⭐
-                  </div>
-                  <p className="home-testimonials__comment text-sm text-slate-700 leading-relaxed font-medium italic">
-                    "Mình cực kỳ ấn tượng với giao diện sắc nét và lộ trình học
-                    khoa học ở đây. Bài học trực quan kết hợp flashcards giúp
-                    mình tiến bộ vượt bậc chỉ sau vài tháng ôn luyện."
-                  </p>
-                </div>
-
-                <div className="home-testimonials__author mt-8 flex items-center gap-4 border-t border-slate-100 pt-6">
-                  <div className="home-testimonials__avatar h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center font-black text-blue-600 shadow-inner">
-                    {item.name[0]}
-                  </div>
-                  <div className="home-testimonials__info">
-                    <h3 className="home-testimonials__name text-sm font-bold text-slate-900">
-                      {item.name}
-                    </h3>
-                    <p className="home-testimonials__score text-xs font-black text-blue-600">
-                      Đạt kết quả: {item.score}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="home-cta pb-24 bg-white">
+      <section className="home-cta pb-24 bg-white pt-16">
         <div className="home-cta__container mx-auto max-w-7xl px-6">
           <div className="home-cta__box relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-600 px-8 py-16 text-center text-white shadow-2xl shadow-blue-500/25 sm:px-12 lg:py-20">
-            {/* Rich design accents */}
             <div className="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-white/20 blur-3xl pointer-events-none"></div>
             <div className="absolute -right-20 -bottom-20 h-72 w-72 rounded-full bg-black/20 blur-3xl pointer-events-none"></div>
 
@@ -489,8 +324,7 @@ function Home() {
 
               <p className="home-cta__desc mt-5 text-sm sm:text-base text-blue-100 leading-relaxed font-medium">
                 Đăng ký tài khoản ngay hôm nay để trải nghiệm hệ thống học tập
-                công nghệ cao, theo dõi tiến độ chuẩn xác và nhận trọn bộ tài
-                liệu độc quyền.
+                công nghệ cao và nhận trọn bộ tài liệu độc quyền.
               </p>
 
               <div className="home-cta__actions mt-10 flex flex-wrap justify-center gap-4">
@@ -512,9 +346,7 @@ function Home() {
           </div>
         </div>
       </section>
-
-      <FloatingContact />
-    </MainLayout>
+    </>
   );
 }
 
