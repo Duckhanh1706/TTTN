@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+  background-color: #f8fafc;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hiệu ứng trượt lên và hiện dần (Fade In Up) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Class tiện ích gọi hiệu ứng */
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Độ trễ hiệu ứng cho các phần tử xuất hiện lần lượt */
+.delay-100 {
+  animation-delay: 100ms;
+}
+.delay-200 {
+  animation-delay: 200ms;
+}
+.delay-300 {
+  animation-delay: 300ms;
+}
