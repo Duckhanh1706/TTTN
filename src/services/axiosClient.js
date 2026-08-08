@@ -1,7 +1,9 @@
 import axios from "axios";
 
 const axiosClient = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "https://tttn-be-psz6.onrender.com",
+  baseURL: import.meta.env.VITE_API_URL
+    ? `${import.meta.env.VITE_API_URL}/api`
+    : "https://tttn-be-psz6.onrender.com/api",
   headers: {
     "Content-Type": "application/json",
   },
