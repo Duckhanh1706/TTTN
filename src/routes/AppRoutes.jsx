@@ -31,7 +31,7 @@ import TeacherExamsManager from "../pages/teacher/Assignments";
 import TeacherAnalytics from "../pages/teacher/Analytics";
 import TeacherProfile from "../pages/teacher/Profile";
 import TeacherEditCourse from "../pages/teacher/EditCourse";
-import ExamQuestions from "../pages/teacher/ExamQuestions"; // Đã import component trang soạn câu hỏi
+import TeacherExamQuestions from "../pages/teacher/exams"; // Đã import component trang soạn câu hỏi
 
 // Admin Pages & Admin Login
 import AdminDashboard from "../pages/admin/Dashboard";
