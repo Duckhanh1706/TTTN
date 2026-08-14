@@ -22,7 +22,6 @@ function TeacherEditCourse() {
   });
 
   const [lessons, setLessons] = useState([]);
-
   const [newLessonTitle, setNewLessonTitle] = useState("");
   const [newLessonVideoFile, setNewLessonVideoFile] = useState(null);
 
