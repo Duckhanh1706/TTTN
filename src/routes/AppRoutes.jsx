@@ -157,7 +157,7 @@ function AppRoutes() {
         {/* Route mới được thêm vào */}
         <Route
           path="/teacher/exams/:examId/questions"
-          element={<ExamQuestions />}
+          element={<TeacherExamQuestions />}
         />
         <Route path="/teacher/analytics" element={<TeacherAnalytics />} />
         <Route path="/teacher/profile" element={<TeacherProfile />} />
