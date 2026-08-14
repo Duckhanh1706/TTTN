@@ -31,6 +31,7 @@ import TeacherExamsManager from "../pages/teacher/Assignments";
 import TeacherAnalytics from "../pages/teacher/Analytics";
 import TeacherProfile from "../pages/teacher/Profile";
 import TeacherEditCourse from "../pages/teacher/EditCourse";
+import ExamQuestions from "../pages/teacher/ExamQuestions"; // Đã import component trang soạn câu hỏi
 
 // Admin Pages & Admin Login
 import AdminDashboard from "../pages/admin/Dashboard";
@@ -53,7 +54,6 @@ const HomeRouter = () => {
     const currentUser = JSON.parse(userStored);
     if (currentUser.role === "student") return <StudentDashboard />;
     if (currentUser.role === "teacher") return <TeacherDashboard />;
-    // Admin không nên dùng chung kho elearning_user, nhưng nếu có thì điều hướng chuẩn
     if (currentUser.role === "admin")
       return <Navigate to="/admin/dashboard" replace />;
   } catch (err) {
@@ -63,7 +63,6 @@ const HomeRouter = () => {
 };
 
 const ProtectedRoute = ({ allowedRoles, children }) => {
-  // 1. Kiểm tra riêng nếu route thuộc về Admin (Sử dụng kho lưu trữ admin riêng biệt)
   if (
     allowedRoles &&
     allowedRoles.includes("admin") &&
@@ -85,7 +84,6 @@ const ProtectedRoute = ({ allowedRoles, children }) => {
     }
   }
 
-  // 2. Kiểm tra cho các phân quyền thông thường (Student / Teacher)
   const userStored = localStorage.getItem("elearning_user");
   if (!userStored) return <Navigate to="/login" replace />;
 
@@ -155,6 +153,11 @@ function AppRoutes() {
         <Route
           path="/teacher/courses/:id/exams"
           element={<TeacherExamsManager />}
+        />
+        {/* Route mới được thêm vào */}
+        <Route
+          path="/teacher/exams/:examId/questions"
+          element={<ExamQuestions />}
         />
         <Route path="/teacher/analytics" element={<TeacherAnalytics />} />
         <Route path="/teacher/profile" element={<TeacherProfile />} />
